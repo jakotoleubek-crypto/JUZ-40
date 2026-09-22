@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#170f28" />
+  <title>JUZ40 — ГЕРА ТОБЫ МАТ-11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+</head>
+<body>
+  <input id="quickPhotoInput" class="quick-file" type="file" accept="image/*" aria-label="Фото жүктеу" />
+  <input id="quickFounderPhotoInput" class="quick-file" type="file" accept="image/*" aria-label="Қалаушы фотосын жүктеу" />
+  <input id="playlistPhotoInput" class="quick-file" type="file" accept="image/*" aria-label="Плейлист мұқабасын жүктеу" />
+  <input id="goldMusicInput" class="quick-file" type="file" accept="audio/*" aria-label="Біздің алтындар музыкасын жүктеу" />
+  <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div><div class="grain"></div>
+  <header class="hero">
+    <p class="eyebrow">МЕКТЕП БІТІРУШІЛЕРІ · 2027</p>
+    <h1>JUZ<span>40</span></h1>
+    <h2>ГЕРА ТОБЫ · МАТ-11</h2>
+    <blockquote>«Өткен күн — тарих, келер күн — сыр, бүгінгі күн — сый.» <cite>— халық даналығы</cite></blockquote>
+    <div class="hero-actions"><a href="#album" class="btn primary">Естеліктерді көру <b>↓</b></a><button class="btn ghost" id="openGuide">Қалай толтырамын?</button></div>
+  </header>
+
+  <section class="playlist-section" aria-labelledby="playlistTitle">
+    <div class="playlist-heading"><div><p class="eyebrow">JUZ40 · БІРГЕ ТЫҢДАЙМЫЗ</p><h3 id="playlistTitle">Біздің плейлисттер</h3></div><span>үш ерекше mood</span></div>
+    <div class="playlist-grid">
+      <article class="playlist-card heart-playlist" data-playlist="0"><img id="playlistCover0" src="assets/math-11-heart.jpeg" alt="Ортақ фото"><button class="cover-upload" type="button" data-cover="0">Фото жүктеу</button><div class="playlist-copy"><span>01 · ОРТАҚ ФОТО</span><h4>🤍 Біздің алтындар</h4><p>Адамдар, естеліктер, бір жүрек</p><audio class="playlist-audio" controls src="assets/alpha-kim-ol.m4a"></audio></div><i aria-hidden="true">▶</i></article>
+      <article class="playlist-card neon-playlist" data-playlist="1"><div class="cover-art" id="playlistCover1"><b>∞</b><span>JUZ40</span></div><button class="cover-upload" type="button" data-cover="1">Фото жүктеу</button><div class="playlist-copy"><span>02 · ҚАУЫМДАСТЫҚ</span><h4>♾️ JUZ40</h4><p>Бренд, ортақ рух, бір қауым</p><audio class="playlist-audio" controls src="assets/elevation-worship-wait-on-you.mp3"></audio></div><i aria-hidden="true">▶</i></article>
+      <article class="playlist-card violet-playlist" data-playlist="2"><div class="cover-art" id="playlistCover2"><b>π</b><span>PRIME</span></div><button class="cover-upload" type="button" data-cover="2">Фото жүктеу</button><div class="playlist-copy"><span>03 · PRIME GERAKL TOBY</span><h4>💜 PRIME GERAKL TOBY</h4><p>Математика, даму, технология</p><audio class="playlist-audio" controls src="assets/de-lacure-algabas.mp3"></audio></div><i aria-hidden="true">▶</i></article>
+    </div>
+  </section>
+
+  <section class="founder-wrap">
+    <div class="founder-glow"></div>
+    <div class="founder-photo empty" id="founderPhoto"><span>＋</span><small>Фото қосу</small></div>
+    <div class="founder-copy"><p class="founder-label">◆ НЕГІЗГІ ҚАЛАУШЫ ◆</p><h3 id="founderName">Аты-жөнің</h3><p id="founderQuote">«Осы жерге өзіңнің жүрекке жақын цитатаңды жаз.»</p><p id="founderSong" class="founder-song"></p><button class="btn founder-edit" id="editFounder">Профильді толтыру ✎</button></div>
+  </section>
+
+  <main id="album">
+    <div class="album-head"><div><p class="eyebrow">БІР СЫНЫП · БІР ОТБАСЫ</p><h3>Біздің естелік альбом</h3></div><p><strong>67</strong> жеке парақ<br><span>Әр естелік — мәңгілік</span></p></div>
+    <nav id="tabs" class="tabs" aria-label="Альбом беттері"></nav>
+    <section id="card" class="memory-card" aria-live="polite"></section>
+    <div class="pager"><button id="prev" class="round" aria-label="Алдыңғы адам">←</button><span id="pageLabel"></span><button id="next" class="round" aria-label="Келесі адам">→</button></div>
+  </main>
+
+  <section class="footer-note"><span>∞</span><p>JUZ40 · Математика әрқашан бізді біріктірсін</p></section>
+
+  <dialog id="guide"><button class="close" data-close>×</button><p class="eyebrow">АЛҒАШҚЫ РЕТ</p><h3>Өзіңнің парағыңды толтыр</h3><ol><li>«Өзгерту» батырмасын бас.</li><li>Фотоңды, естелігіңді және Instagram-ыңды енгіз.</li><li>«Сақтау» бас — деректерің осы құрылғыда сақталады.</li></ol><p class="tiny">Баршаға ортақ онлайн сақтау үшін Firebase баптауын қосу қажет. Төмендегі нұсқаулықты қараңыз.</p><button class="btn primary" data-close>Түсіндім</button></dialog>
+
+  <dialog id="editor"><button class="close" data-close>×</button><p class="eyebrow" id="editorType">ЕСТЕЛІК</p><h3 id="editorTitle">Парақты өзгерту</h3><form id="editForm">
+    <label>Аты-жөнің <input id="nameInput" maxlength="48" placeholder="Аты-жөніңді жаз" /></label>
+    <label>Фотоң <input id="photoInput" type="file" accept="image/*" /></label><img id="photoPreview" class="preview" alt="Фото алдын ала көрінісі" />
+    <label>Сүйікті әнім <input id="audioInput" type="file" accept="audio/*" /></label><audio id="audioPreview" class="audio-preview" controls></audio>
+    <div class="song-fields"><label>Ән атауы <input id="songTitleInput" maxlength="90" placeholder="Мысалы: Кім ол?" /></label><label>Автор / орындаушы <input id="songArtistInput" maxlength="90" placeholder="Мысалы: ALPHA" /></label></div>
+    <label>Әннің шағын мұқабасы <input id="songCoverInput" type="file" accept="image/*" /></label><img id="songCoverPreview" class="preview song-cover-preview" alt="Ән мұқабасы" />
+    <label>JUZ40 естелігім <textarea id="memoryInput" maxlength="700" placeholder="Сыныптағы ең есте қалған сәтің..."></textarea></label>
+    <label>Цитата <input id="quoteInput" maxlength="220" placeholder="Өзіңе ұнайтын сөз" /></label>
+    <label>Instagram <input id="instaInput" maxlength="50" placeholder="@instagram" /></label>
+    <div class="form-actions"><button type="button" class="btn ghost" data-close>Болдырмау</button><button class="btn primary" type="submit">Сақтау</button></div>
+  </form></dialog>
+  <dialog id="founderEditor"><button class="close" data-close>×</button><p class="founder-label">◆ НЕГІЗГІ ҚАЛАУШЫ ◆</p><h3>Менің профилім</h3><form id="founderForm">
+    <label>Аты-жөнің <input id="founderNameInput" maxlength="48" placeholder="Аты-жөніңді жаз" /></label>
+    <label>Фотоң <input id="founderPhotoInput" type="file" accept="image/*" /></label><img id="founderPreview" class="preview" alt="Фото алдын ала көрінісі" />
+    <label>Сүйікті ән атауы <input id="founderSongInput" maxlength="100" placeholder="Мысалы: Wait On You — Elevation Worship" /></label>
+    <label>Цитата <textarea id="founderQuoteInput" maxlength="300" placeholder="Өзіңе ұнайтын ерекше сөз..."></textarea></label>
+    <div class="form-actions"><button type="button" class="btn ghost" data-close>Болдырмау</button><button class="btn primary" type="submit">Сақтау</button></div>
+  </form></dialog>
+  <!-- firebase-config.js файлын өз Firebase деректеріңмен толтырсаң, альбом ортақ болады -->
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
